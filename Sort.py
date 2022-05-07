@@ -33,9 +33,11 @@ def sort(array):
     # 基準値を参考に2つの値を探索し，交換する部分
     while left_index < right_index:
         # 基準値以上の値のindexを探索
+        # 範囲: arrayの要素数より小さい
         while left_index < right_limit and pivot > array[left_index]:
             left_index += 1
         # 基準値未満の値のindexを探索
+        # 範囲: arrayの先頭index以上
         while right_index >= left_limit and pivot <= array[right_index]:
             right_index -= 1
 
